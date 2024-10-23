@@ -5,8 +5,9 @@ import logo from "../assets/images/logo.png";
 import { Link } from "react-router-dom";
 
 const Header = () => {
-  const [showDropdown, setShowDropdown] = useState(false);
-  const { user, uid, setUid, setActive } = useGlobalContext();
+    const [showDropdown, setShowDropdown] = useState(false);
+    const { user, uid, setUid, setActive } = useGlobalContext();
+    console.log(user);
 
   const handleImageClick = () => {
     setShowDropdown((p) => !p);
@@ -19,35 +20,31 @@ const Header = () => {
     }
   }, [currentRoute]);
 
-  return (
-    <header className="header">
-      <div className="header-logo">
-        <Link to="/" onClick={() => setActive(0)}>
-          <img className="logo-img" src={logo} alt="logo" />
-          <span>FinGo</span>
-        </Link>
-      </div>
+    return (
+        <header className="header">
+            <div className="header-logo">
+                <Link to="/" onClick={() => setActive(0)}>
+                    <img className="logo-img" src={logo} alt="logo" />
+                    <span style={{fontFamily: "Playwrite GB S, cursive", fontWeight: "bold"}}>MoneyMinds</span>
+                </Link>
+            </div>
 
-      <Link to="/profile" onClick={() => setActive(-1)}>
-        <div className="header-img">
-          {uid === null ? (
-            <img
-              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSX5DWWYRWd7uysUpQK690_mjjaBPgll2-V0Q&usqp=CAU"
-              alt="profile"
-            />
-          ) : (
-            <img
-              src={
-                user?.photoURL ||
-                "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSX5DWWYRWd7uysUpQK690_mjjaBPgll2-V0Q&usqp=CAU"
-              }
-              alt="profile"
-            />
-          )}
-        </div>
-      </Link>
-    </header>
-  );
+            <Link to="/profile" onClick={() => setActive(-1)}>
+                <div
+                    className="header-img"
+                >
+                    {uid === null ? (
+                        <img
+                            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSX5DWWYRWd7uysUpQK690_mjjaBPgll2-V0Q&usqp=CAU"
+                            alt="profile"
+                        />
+                    ) : (
+                        <img src={user?.photoURL} />
+                    )}
+                </div>
+            </Link>
+        </header>
+    );
 };
 
 export default Header;
