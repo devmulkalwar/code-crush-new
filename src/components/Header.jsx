@@ -7,24 +7,24 @@ import { Link } from "react-router-dom";
 const Header = () => {
     const [showDropdown, setShowDropdown] = useState(false);
     const { user, uid, setUid, setActive } = useGlobalContext();
+    console.log(user);
 
-    const handleImageClick = () => {
-        setShowDropdown((p) => !p);
-    };
+  const handleImageClick = () => {
+    setShowDropdown((p) => !p);
+  };
 
-    const currentRoute = window.location.pathname.substring(1);
-    useEffect(() => {
-        if (currentRoute === "") {
-            setActive(0);
-        }
-    }, [currentRoute]);
+  const currentRoute = window.location.pathname.substring(1);
+  useEffect(() => {
+    if (currentRoute === "") {
+      setActive(0);
+    }
+  }, [currentRoute]);
 
     return (
         <header className="header">
             <div className="header-logo">
                 <Link to="/" onClick={() => setActive(0)}>
                     <img className="logo-img" src={logo} alt="logo" />
-                    <span>MoneyMinds</span>
                 </Link>
             </div>
 
@@ -38,7 +38,7 @@ const Header = () => {
                             alt="profile"
                         />
                     ) : (
-                        <img src={`${user?.photoURL}`} alt="profile" />
+                        <img src={`${user?.photoURL}`} />
                     )}
                 </div>
             </Link>

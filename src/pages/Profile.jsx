@@ -6,34 +6,35 @@ import { logout } from "../database/auth.db";
 import AddCategory from "../components/AddCategory";
 
 const Profile = () => {
-  const { categories, setUid, user , setBankBal ,setCashBal} = useGlobalContext();
+  const { categories, setUid, user, setBankBal, setCashBal } = useGlobalContext();
 
   const [showForm, setShowForm] = useState(false);
+
   const onResetClick = () => {
     setBankBal(0);
     setCashBal(0);
   };
 
   const handleLogout = () => {
-    logout();
-    setUid(null);
-    localStorage.removeItem("user");
-    console.log("Logout clicked");
+    if (window.confirm("Are you sure you want to log out?")) {
+      logout();
+      setUid(null);
+      localStorage.removeItem("user");
+      console.log("Logout clicked");
+    }
   };
 
   const renderCategories = () => {
     return (
       <>
-        {categories?.map((cat) => {
-          return (
-            <div className="category">
-              <span className="emoji" style={{ backgroundColor: cat.color }}>
-                {cat.emoji}
-              </span>
-              {cat.name}
-            </div>
-          );
-        })}
+        {categories?.map((cat, index) => (
+          <div className="category" key={index}>
+            <span className="emoji" style={{ backgroundColor: cat.color }}>
+              {cat.emoji}
+            </span>
+            {cat.name}
+          </div>
+        ))}
       </>
     );
   };
@@ -42,15 +43,15 @@ const Profile = () => {
     <div className="profile-page">
       <h2>Your Profile</h2>
       <div className="user-profile">
-        <img src={`${user?.photoURL}`} alt="profile" />
+        <img src={`${user?.photoURL}`} />
         <span className="display-name">{user?.name}</span>
         <span className="username">{user?.email}</span>
       </div>
+
       <div className="button-container">
         <button className="logout-btn" onClick={handleLogout}>
           Logout
         </button>
-
         <button className="logout-btn" onClick={onResetClick}>
           Reset
         </button>
@@ -59,7 +60,6 @@ const Profile = () => {
       <h3>All Categories</h3>
       <div className="categories">
         {renderCategories()}
-
         {categories?.length < 20 && (
           <button className="category" onClick={() => setShowForm(true)}>
             <span className="emoji">
