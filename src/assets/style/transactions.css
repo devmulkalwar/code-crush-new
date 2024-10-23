@@ -8,6 +8,10 @@
   justify-content: center;
 }
 
+.date{
+  font-size: 2em;
+}
+
 .filter-button {
   background-color: #333;
   color: #fff;

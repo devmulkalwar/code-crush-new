@@ -5,10 +5,10 @@
   height: 100%;
   margin-top: 20px;
   padding: 20px;
-  margin: auto auto;
+  margin: 30px auto;
   border-radius: 20px;
-  border: 2px dashed var(--text-color);
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  /* border: 2px solid var(--text-color); */
+  box-shadow: 0 0px 10px rgb(193, 193, 193);
 }
 
 .second-row {
@@ -45,6 +45,7 @@
 .second-row{
   width: 100%;
   display: flex;
+  align-items: center;
   justify-content: center;
 }
 
@@ -54,17 +55,20 @@
 
 .transaction-dropdown,
 .category-dropdown {
-  background-color: #50717e;
-  border: none;
+  background-color: #57af00;
+  
+  /* box-shadow: 0px 0px 5px rgb(205, 205, 205); */
+  border: 0.5px solid white;
+  padding: 10px;
   padding: 5px;
   border-radius: 10px;
   font-size: 13px;
-  width: 25%;
+  width: 40%;
   outline: none;
 }
 
 .category-dropdown { 
-  background-color: #517250;
+  background-color: #0095d0;
 }
 
 .transaction-dropdown option,
@@ -89,7 +93,7 @@
 }
 
 .type-dropdown {
-  width: 130px;
+  width: 150px;
   padding: 4px;
   border-radius: 8px;
   background-color: #fff;

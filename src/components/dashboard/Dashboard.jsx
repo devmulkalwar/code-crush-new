@@ -77,8 +77,8 @@ function Dashboard() {
     return (
         <div className="">
             <div className="statistics">
-                    <h4>Total Income Vs Total Expenses</h4>
                 <div className="chart container">
+                    <h4>Total Income Vs Total Expenses</h4>
                     <canvas ref={chartRef}></canvas>
                 </div>
 
@@ -131,7 +131,7 @@ function Dashboard() {
                     </div>
                 </div>
                 <div className="pie-con">
-            <h3>Category Distributions</h3>
+            <h4>Category Distributions</h4>
                     <div className="container pie">
 
                         <PieChart></PieChart>

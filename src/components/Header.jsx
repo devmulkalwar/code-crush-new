@@ -24,7 +24,7 @@ const Header = () => {
             <div className="header-logo">
                 <Link to="/" onClick={() => setActive(0)}>
                     <img className="logo-img" src={logo} alt="logo" />
-                    <span>FinGo</span>
+                    <span>MoneyMinds</span>
                 </Link>
             </div>
 
