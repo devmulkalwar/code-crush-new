@@ -10,6 +10,7 @@ const Login = () => {
 
     return (
         <div className="login">
+            <div style={{fontSize: "3rem"}}>Welcome to <span style={{fontFamily: "Playwrite GB S, cursive", fontWeight: "bold"}}>Finance4</span></div>
             <span className="login-heading">Sign in with Google</span>
             <div className="login-button">
                 <GoogleButton onClick={handleLogin} />
