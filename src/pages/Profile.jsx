@@ -43,12 +43,9 @@ const Profile = () => {
     <div className="profile-page">
       <h2>Your Profile</h2>
       <div className="user-profile">
-        <img
-          src={user?.photoURL || "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSX5DWWYRWd7uysUpQK690_mjjaBPgll2-V0Q&usqp=CAU"}
-          alt="profile"
-        />
-        <span className="display-name">{user?.name || "Anonymous"}</span>
-        <span className="username">{user?.email || "No email provided"}</span>
+        <img src={`${user?.photoURL}`} />
+        <span className="display-name">{user?.name}</span>
+        <span className="username">{user?.email}</span>
       </div>
 
       <div className="button-container">
