@@ -25,7 +25,6 @@ const Header = () => {
             <div className="header-logo">
                 <Link to="/" onClick={() => setActive(0)}>
                     <img className="logo-img" src={logo} alt="logo" />
-                    <span style={{fontFamily: "Playwrite GB S, cursive", fontWeight: "bold"}}>MoneyMinds</span>
                 </Link>
             </div>
 

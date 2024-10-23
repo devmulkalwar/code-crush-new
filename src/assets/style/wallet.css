@@ -1,7 +1,7 @@
 /* Wallet Container */
 .wallet-container {
   border-radius: 10px;
-  border: 2px dashed var(--text-color);
+  border: 2px solid var(--text-color);
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
   margin: 20px auto;
   padding: 20px;

@@ -21,6 +21,7 @@ const Home = () => {
   return (
     <div className="home">
       <span className="home-header">Welcome, {user?.name}</span>
+      <p className="home-header">Fanancial Dashboard</p>
       <div className="balance blurry-box">
         <span>Available Balance</span>
         <span>₹ {totalBalance}</span>
