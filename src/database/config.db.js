@@ -3,13 +3,14 @@ import { collection, getFirestore } from "firebase/firestore";
 import { getAuth } from "firebase/auth";
 
 const firebaseConfig = {
-    apiKey: "AIzaSyAmKwH8gR3-Xpodm5948gMS0ozZ-txyI2c",
-    authDomain: "finance-tracker-54f13.firebaseapp.com",
-    projectId: "finance-tracker-54f13",
-    storageBucket: "finance-tracker-54f13.appspot.com",
-    messagingSenderId: "568563772621",
-    appId: "1:568563772621:web:d560f3d072ae70a9294d84",
-};
+    apiKey: "AIzaSyDLJjdSfhs9zihm7tqFoJ74i85IG7j-BYw",
+    authDomain: "code-crush-new.firebaseapp.com",
+    projectId: "code-crush-new",
+    storageBucket: "code-crush-new.appspot.com",
+    messagingSenderId: "1044029160449",
+    appId: "1:1044029160449:web:ce1653a48429a4e6cbd400",
+    measurementId: "G-Q4LYE5TNZD"
+  };
 
 //Initilized variables
 const app = initializeApp(firebaseConfig);
