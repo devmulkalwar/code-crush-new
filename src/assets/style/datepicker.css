@@ -1,0 +1,38 @@
+.custom-date-picker {
+    font-family: Arial, sans-serif;
+    width: 100%;
+}
+  
+  
+#date-picker {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 14px;
+    background-color: var(--secondary);
+    outline: none;
+    width: 100%;
+}
+
+#date-picker::-webkit-calendar-picker-indicator {
+    filter: invert(1);
+}
+
+#date-picker:focus {
+    border-color: dodgerblue;
+    box-shadow: 0 0 0 0.1rem rgba(30, 144, 255, 0.25);
+}
+
+#date-picker:hover {
+    border-color: #007bff;
+}
+
+#date-picker option {
+    background-color: #555;
+    color: #fff;
+}
+
+#date-picker option:hover {
+    background-color: #007bff;
+}
+

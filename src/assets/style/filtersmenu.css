@@ -1,0 +1,84 @@
+.filters-menu {
+    position: fixed;
+    top: 50%;
+    z-index: 100000000000;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: var(--secondary);
+    width: 250px;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .cancel-btn {
+    background-color: #c53d3d;
+    color: #fff;
+    border: 1px solid #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+  }
+  
+  .cancel-btn:hover {
+    background-color: #a43e3e;
+  }
+  
+  .cancel-btn:focus {
+    outline: none;
+  }
+  
+  .cancel-btn svg {
+    fill: #fff;
+    margin: 5px;
+    font-size: 1.5rem;
+  }
+  
+  .btn-div {
+    display: flex;
+    justify-content: left;
+    width: 100%;
+    padding: 0;
+    margin-bottom: 10px;
+  }
+  
+  .date {
+    margin-bottom: 10px;
+  }
+  
+  .transactionSort {
+    width: 100%;
+    padding: 8px 12px;
+    margin-bottom: 20px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: var(--secondary);
+    color: white;
+  }
+  
+  .transactionSort:hover {
+    border-color: #007bff;
+  }
+  
+  .transactionSort:focus {
+    outline: none;
+    border-color: #007bff;
+    box-shadow: 0 0 0 0.1rem rgba(0, 123, 255, 0.25);
+  }
+  
+  .transactionSort option {
+    background-color: #555;
+    color: #fff;
+  }
+  
+  .transactionSort option:hover {
+    background-color: #007bff;
+  }
+  
+  

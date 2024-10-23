@@ -1,0 +1,33 @@
+.keypad {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 10px;
+  max-height: 55vh;
+  height: 100%;
+}
+
+.number-btn,
+.backspace-btn,
+.clear-btn,
+.extended-btn {
+  padding: 10px;
+  border: none;
+  border-radius: 10px;
+  background-color: var(--secondary);
+  box-shadow: 3px 3px 3px #0000003b;
+  font-size: 20px;
+  color: black;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  color: var(--text-color);
+}
+
+.red-btn{
+  background-color: rgb(197, 43, 43);
+}
+
+.extended-btn {
+  grid-row: span 3;
+  background: var(--primary);
+  font-size: 2.5em;
+}

@@ -1,0 +1,48 @@
+.calender-model {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: var(--secondary);
+  width: 250px;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.time-picker {
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 14px;
+  background-color: var(--secondary);
+  outline: none;
+  margin-top: 20px;
+  width: 100%;
+}
+
+input[type="time"]::-webkit-calendar-picker-indicator {
+  filter: invert(1);
+}
+
+.time-picker:focus {
+  border-color: dodgerblue;
+  box-shadow: 0 0 0 0.1rem rgba(30, 144, 255, 0.25);
+}
+
+.time-picker:hover {
+  border-color: #007bff;
+}
+
+.time-picker option {
+  background-color: #555;
+  color: #fff;
+}
+
+.time-picker option:hover {
+  background-color: #007bff;
+}
+

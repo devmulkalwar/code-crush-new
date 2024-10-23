@@ -1,0 +1,149 @@
+.add-transaction {
+  max-width: 400px;
+  width: 100%;
+  max-height: 100vh;
+  height: 100%;
+  margin-top: 20px;
+  padding: 20px;
+  margin: auto auto;
+  border-radius: 20px;
+  border: 2px dashed var(--text-color);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.second-row {
+  display: flex;
+  align-items: center;
+
+  justify-content: center;
+
+  justify-content: space-between;
+}
+
+.time-picker{
+  color: #FFF;
+  padding: 5px 10px;
+  border-radius: 5px;
+  border: none;
+  background-color: var(--secondary);
+}
+
+@media (max-width: 768px) {
+  .add-transaction {
+    width: 90%;
+  }
+}
+
+.dropdowns {
+  display: flex;
+  justify-content: space-around;
+  gap: 10px;
+  margin-bottom: 20px;
+  align-items: center;
+}
+
+.second-row{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.transaction-type{
+  width: 25%;
+}
+
+.transaction-dropdown,
+.category-dropdown {
+  background-color: #50717e;
+  border: none;
+  padding: 5px;
+  border-radius: 10px;
+  font-size: 13px;
+  width: 25%;
+  outline: none;
+}
+
+.category-dropdown { 
+  background-color: #517250;
+}
+
+.transaction-dropdown option,
+.category-dropdown option {
+  background-color: white;
+  color: black;
+}
+
+.transaction-dropdown:focus,
+.category-dropdown:focus {
+  outline: none;
+}
+
+.select-dropdown:last-child {
+  margin-right: 0;
+}
+
+.transaction-type {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.type-dropdown {
+  width: 130px;
+  padding: 4px;
+  border-radius: 8px;
+  background-color: #fff;
+  font-size: 13px;
+  color: #555;
+  border: none;
+  outline: none;
+}
+
+.type-dropdown option {
+  color: black;
+}
+
+.amount-entry {
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.amount-input,
+.comment-input {
+  width: 70%;
+  padding: 12px;
+  background-color: transparent;
+  font-size: 30px;
+  font-weight: bolder;
+  border: 2px solid transparent;
+  outline: none;
+  text-align: center;
+}
+
+.comment-input {
+  font-size: 15px;
+  font-weight: bold;
+  color: #a7a7a7;
+}
+
+
+@media (max-width: 425px) {
+
+  .amount-input,
+  .comment-input {
+    width: 90%;
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 768px) {
+
+  .amount-input,
+  .comment-input {
+    width: 90%;
+    font-size: 20px;
+  }
+}

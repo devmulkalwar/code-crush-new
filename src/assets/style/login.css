@@ -1,0 +1,16 @@
+.login {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 80vh; 
+}
+
+.login-heading {
+    font-size: 1.5rem;
+    margin: 1rem 1rem;
+}
+
+.login-button {
+    margin-top: 1rem;
+}
