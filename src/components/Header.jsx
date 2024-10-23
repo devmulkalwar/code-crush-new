@@ -9,16 +9,16 @@ const Header = () => {
     const { user, uid, setUid, setActive } = useGlobalContext();
     console.log(user);
 
-    const handleImageClick = () => {
-        setShowDropdown((p) => !p);
-    };
+  const handleImageClick = () => {
+    setShowDropdown((p) => !p);
+  };
 
-    const currentRoute = window.location.pathname.substring(1);
-    useEffect(() => {
-        if (currentRoute === "") {
-            setActive(0);
-        }
-    }, [currentRoute]);
+  const currentRoute = window.location.pathname.substring(1);
+  useEffect(() => {
+    if (currentRoute === "") {
+      setActive(0);
+    }
+  }, [currentRoute]);
 
     return (
         <header className="header">
