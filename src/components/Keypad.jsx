@@ -15,6 +15,28 @@ const Keypad = ({
 }) => {
 
   const [isCalOpen , setIsCalOpen] =useState(false) ;
+  document.addEventListener('keydown', function(event) {
+    // Check if the key pressed is a number (0-9)
+    if (event.key >= '1' && event.key <= '9') {
+      handleNumberClick(`${event.key}`);
+    }
+    if (event.key === 'Backspace') {
+      handleBackspace();
+    }
+    if (event.key === '.') {
+      handleNumberClick('.');
+    }
+    if (event.key === '0') {
+      handleNumberClick('0');
+    }
+    if (event.key === 'Escape') {
+      handleClear();
+    }
+    if (event.key === 'Enter') {
+      handleSubmit();
+    }
+  });
+
  
   return (
     <div className="keypad">
