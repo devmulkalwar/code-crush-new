@@ -42,7 +42,7 @@ const Profile = () => {
     <div className="profile-page">
       <h2>Your Profile</h2>
       <div className="user-profile">
-        <img src={`${user?.photoURL}`} alt="profile" />
+        <img src={`${user?.photoURL}`} />
         <span className="display-name">{user?.name}</span>
         <span className="username">{user?.email}</span>
       </div>

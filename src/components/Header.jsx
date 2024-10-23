@@ -39,7 +39,7 @@ const Header = () => {
                             alt="profile"
                         />
                     ) : (
-                        <img src={user?.photoURL} />
+                        <img src={`${user?.photoURL}`} />
                     )}
                 </div>
             </Link>
